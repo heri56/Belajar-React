@@ -69,6 +69,7 @@ class ListItem extends React.Component {
 
 }
 
+<<<<<<< HEAD
 class Statefull extends React.Component {
   constructor(){
     super();
@@ -115,6 +116,8 @@ class Statefull extends React.Component {
     }
 
   }
+=======
+>>>>>>> origin/master
 //export default App;
 //export default Header;
 //Link Tutorial: https://www.tutorialspoint.com/reactjs/reactjs_components.htm
