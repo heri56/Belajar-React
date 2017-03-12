@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Menu, { SubMenu, Item as MenuItem } from 'rc-menu';
 
 /*class App extends React.Component {
    render() {
@@ -24,11 +24,17 @@ import React from 'react';
 
 class Header extends React.Component {
   render(){
+    //Style Background
+  document.body.style.backgroundColor = "SteelBlue ";
+    const divStyle = {
+      color: 'blue',
+    };
     return (
-      <div>
-        <h1>Header</h1>
+      <div style={divStyle}>
+        <h1>React style CSS</h1>
       </div>
-    )
+
+    );
   }
 
 }
@@ -39,6 +45,29 @@ class Header extends React.Component {
 
   }*/
 //}
+
+class GroceList extends React.Component {
+  render(){
+    return(
+      <ul>
+        <ListItem jumlah="1" name="Bread"/>
+        <ListItem jumlah="6" name="Eggs"/>
+        <ListItem jumlah="2" name="Milk"/>
+      </ul>
+    );
+  }
+}
+
+class ListItem extends React.Component {
+  render(){
+    return(
+      <li>
+        {this.this.props.jumlah}x {this.props.name}
+      </li>
+    );
+  }
+
+}
 
 //export default App;
 export default Header;
