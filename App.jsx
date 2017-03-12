@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Menu, { SubMenu, Item as MenuItem } from 'rc-menu';
 
 /*class App extends React.Component {
    render() {
@@ -24,11 +24,17 @@ import React from 'react';
 
 class Header extends React.Component {
   render(){
+    //Style Background
+  document.body.style.backgroundColor = "SteelBlue ";
+    const divStyle = {
+      color: 'blue',
+    };
     return (
-      <div>
-        <h1>Header</h1>
+      <div style={divStyle}>
+        <h1>React style CSS</h1>
       </div>
-    )
+
+    );
   }
 
 }
@@ -40,5 +46,76 @@ class Header extends React.Component {
   }*/
 //}
 
+class GroceList extends React.Component {
+  render(){
+    return(
+      <ul>
+        <ListItem jumlah="1" name="Bread"/>
+        <ListItem jumlah="6" name="Eggs"/>
+        <ListItem jumlah="2" name="Milk"/>
+      </ul>
+    );
+  }
+}
+
+class ListItem extends React.Component {
+  render(){
+    return(
+      <li>
+        {this.this.props.jumlah}x {this.props.name}
+      </li>
+    );
+  }
+
+}
+
+class Statefull extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      data:
+      [
+        {
+          "id":1,
+          "name":"Foo",
+          "age":20
+        },
+        {
+          "id":2,
+          "name":"Bar",
+          "age":20
+        }
+      ]
+    }
+  }
+
+  render(){
+    return (
+      <div>
+        <Header/>
+        <table>
+          <tbody>
+            {this.state.data.map((person, i) => <TableRow key= {i} data= {person} />)}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
+
+  class TableRow extends React.Component {
+    render() {
+      return (
+        <tr>
+          <td>{this.props.data.id}</td>
+          <td>{this.props.data.name}</td>
+          <td>{this.props.data.age}</td>
+          </tr>
+      );
+    }
+
+  }
 //export default App;
-export default Header;
+//export default Header;
+//Link Tutorial: https://www.tutorialspoint.com/reactjs/reactjs_components.htm
+export default Statefull;
