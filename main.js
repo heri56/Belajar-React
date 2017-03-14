@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import State from './App.jsx';
 
-ReactDOM.render(<App/>, document.getElementById('null'));
+ReactDOM.render(<State header="Ini Header" content="Konten"/>, document.getElementById('demo'));
+export default State;

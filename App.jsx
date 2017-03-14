@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu, { SubMenu, Item as MenuItem } from 'rc-menu';
+//import Menu, { SubMenu, Item as MenuItem } from 'rc-menu';
 
 /*class App extends React.Component {
    render() {
@@ -113,10 +113,31 @@ class Statefull extends React.Component {
           <td>{this.props.data.age}</td>
           </tr>
       );
-    }
+      }
 
   }
+
+  class State extends React.Component{
+  /*constructor(props){
+    super(props);
+
+    this.state = {
+      header: "Haeder disini",
+        "content": "Content dari state"
+    }
+
+  }*/
+  render(){
+    return (
+        <div>
+          <h1>{this.props.header}</h1>
+          <h2>{this.props.content}</h2>
+        </div>
+    );
+  }
+
+}
 //export default App;
 //export default Header;
 //Link Tutorial: https://www.tutorialspoint.com/reactjs/reactjs_components.htm (Stateful Example)
-export default Statefull;
+export default State;
